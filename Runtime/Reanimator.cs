@@ -57,6 +57,12 @@ namespace Aarthificial.Reanimation
         [Tooltip("Framerate of the displayed animation.")] 
         [SerializeField]
         private int fps = 12;
+        public int FPS
+        {
+            get => fps;
+            set => fps = Mathf.Max(value,1);
+        }
+
 
         [Tooltip("Drivers marked as temporary are removed from the state if they were not set during the previous resolution.")]
         [SerializeField]
